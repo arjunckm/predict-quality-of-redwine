@@ -1,1 +1,1 @@
-web: voila —-no-browser Predict-the-Quality-of-Red-wine.ipynb
+web: gunicorn app:app
