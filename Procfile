@@ -1,1 +1,1 @@
-web: voila Predict-the-Quality-of-Red-wine.ipynb
+web: voila —-no-browser Predict-the-Quality-of-Red-wine.ipynb
