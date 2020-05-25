@@ -1,1 +1,1 @@
-web: voila —-port=$PORT —-no-browser Predict-the-Quality-of-Red-wine.ipynb
+web: voila Predict-the-Quality-of-Red-wine.ipynb
