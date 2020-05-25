@@ -1,1 +1,1 @@
-web: flask —-no-browser "Predict the Quality of Red wine.ipynb"
+web: flask —-no-browser Predict-the-Quality-of-Red-wine.ipynb
