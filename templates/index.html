@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Quality of Red Wine</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style>
+        .form-group {
+            padding: 0 30px;
+        }
+    </style>
+</head>
+<!-- fixed.acidity	volatile.acidity	citric.acid	residual.sugar	chlorides	free.sulfur.dioxide	total.sulfur.dioxide	density	pH	sulphates	alcohol -->
+
+<body>
+    <div class="container">
+        <!-- Image and text -->
+        <nav class="navbar navbar-default" style="margin-bottom: 30px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Predict the quality of red wine</a>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Enter Details Below</div>
+                    <div class="panel-body">
+                        <form action="{{ url_for('predict')}}" class="form-horizontal" method="POST">
+                            <div class="col-md-6 form-group">
+                                <label for="">fixed acidity</label>
+                                <input type="number" class="form-control" name="fixedacidity" step="0.0000001"
+                                    placeholder="example: 7.4" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">volatile acidity</label>
+                                <input type="number" class="form-control" name="volatileacidity" step="0.0000001"
+                                    placeholder="example:0.70" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">citric acid</label>
+                                <input type="number" class="form-control" name="citricacid" step="0.0000001"
+                                    placeholder="example: 0.04" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">residual sugar</label>
+                                <input type="number" class="form-control" name="residualsugar" step="0.0000001"
+                                    placeholder="example: 1.9" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">chlorides</label>
+                                <input type="number" class="form-control" name="chlorides" step="0.0000001"
+                                    placeholder="example: 0.076" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">free sulfur dioxide</label>
+                                <input type="number" class="form-control" name="freesulfurdioxide" step="0.0000001"
+                                    placeholder="example: 11.0" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">total sulfur dioxide</label>
+                                <input type="number" class="form-control" name="totalsulfurdioxide" step="0.0000001"
+                                    placeholder="example: 34" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">density</label>
+                                <input type="number" class="form-control" name="density" step="0.0000001"
+                                    placeholder="example: 0.9978" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">pH</label>
+                                <input type="number" class="form-control" name="pH" step="0.0000001"
+                                    placeholder="example: 3.51" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">sulphates</label>
+                                <input type="number" class="form-control" name="sulphates" step="0.0000001"
+                                    placeholder="example: 0.56" required />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">alcohol</label>
+                                <input type="number" class="form-control" name="alcohol" step="0.0000001"
+                                    placeholder="example: 9.4" required />
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="submit" class="btn btn-success btn-block" value="Predict Quality"
+                                    name="alcohol" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
+                <h3> {{ outputData }} </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
