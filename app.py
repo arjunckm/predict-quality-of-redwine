@@ -19,7 +19,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = prediction[0]
-    return render_template('index.html', outputData='Quality of Red wine for given parameters falls under {}'.format(output))
+    return render_template('index.html', outputData='Quality of Red wine for given parameters is category : {}'.format(output))
 
 
 if __name__ == '__main__':
